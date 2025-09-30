@@ -5,4 +5,6 @@ export interface OfferTabProps {
   salePercent: number;
   description: string;
   isHit: boolean;
+  className?: string;
+  isVertical?: boolean;
 }
