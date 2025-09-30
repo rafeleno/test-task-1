@@ -1,0 +1,30 @@
+.checkBox {
+  position: relative;
+  max-width: 555px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 44px;
+  z-index: 100;
+}
+
+.checkBox:hover .content,
+.checkBox:hover {
+  color: #ff9d2ec7;
+  cursor: pointer;
+}
+.content:hover {
+  color: #fdb056;
+}
+.checkBox:before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  inset: 0;
+  background-image: url("/check_box.svg");
+}
+
+.active.checkBox:before {
+  background-image: url("/check_box_active.svg");
+}
