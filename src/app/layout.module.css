@@ -1,0 +1,23 @@
+/* .layout {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  inline-size: 100%;
+  min-height: 100vh;
+  gap: 100px;
+
+  @media (width < 768px) {
+    gap: 40px;
+  }
+}
+
+.main {
+  display: grid;
+  gap: 100px;
+  inline-size: 100%;
+  margin-inline: auto;
+  align-content: start;
+
+  @media (width < 768px) {
+    gap: 40px;
+  }
+} */
