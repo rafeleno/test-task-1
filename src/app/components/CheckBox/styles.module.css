@@ -1,30 +1,50 @@
 .checkBox {
-  position: relative;
-  max-width: 555px;
-  min-height: 32px;
+  max-width: 570px;
   display: flex;
   align-items: center;
-  padding-left: 44px;
   z-index: 100;
+  margin-bottom: 14px;
 }
 
-.checkBox:hover .content,
-.checkBox:hover {
-  color: #ff9d2ec7;
+.button {
+  position: relative;
+  display: block;
+  height: 32px;
+  width: 32px;
+  border: 1px solid #606566;
   cursor: pointer;
+  border-radius: 4px;
 }
-.content:hover {
-  color: #fdb056;
-}
-.checkBox:before {
+.button:before,
+.button:after {
   content: "";
   position: absolute;
-  width: 32px;
-  height: 32px;
-  inset: 0;
-  background-image: url("/check_box.svg");
+  transition: all 0.15s ease-in-out;
+  border-radius: 1px;
+}
+.button:before {
+  width: 12px;
+  height: 1px;
+  top: 18px;
+  left: 3px;
+  rotate: 50deg;
 }
 
-.active.checkBox:before {
-  background-image: url("/check_box_active.svg");
+.button::after {
+  width: 20px;
+  height: 1px;
+  top: 15px;
+  left: 9px;
+  rotate: -50deg;
+}
+
+.button:hover:before,
+.button:hover:after {
+  background-color: #606566;
+  background-size: contain;
+}
+
+.active.checkBox .button:before,
+.active.checkBox .button:after {
+  background-color: #fdb056;
 }
