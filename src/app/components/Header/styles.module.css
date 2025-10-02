@@ -1,0 +1,52 @@
+.time {
+  position: relative;
+  font-size: 40px;
+  color: #ffbb00;
+}
+
+.shortTime {
+  color: #ff4e4e;
+}
+
+.timeIsOver {
+  color: #fff;
+}
+
+.time::before,
+.time::after {
+  content: "";
+  position: absolute;
+  background-image: url("/starIconGold.svg");
+  transform: translateY(-50%);
+  top: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+.shortTime.time::before,
+.shortTime.time::after {
+  background-image: url("/starIconRed.svg");
+}
+
+.timeIsOver.time::before,
+.timeIsOver.time::after {
+  background-image: url("/starIconWhite.svg");
+}
+
+.time::before {
+  left: -20px;
+}
+
+.time::after {
+  right: -20px;
+}
+
+.time.hidden {
+  color: transparent;
+}
+
+.hidden.time::before,
+.hidden.time::after {
+  transition: all 0.2s a;
+  display: none;
+}

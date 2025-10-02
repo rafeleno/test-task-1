@@ -12,7 +12,10 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
     <html lang="ru">
-      <body className="body">{children}</body>
+      <TimeProvider>
+        <Header />
+        <body className={`${montserrat.className} body`}>{children}</body>
+      </TimeProvider>
     </html>
   );
 };
