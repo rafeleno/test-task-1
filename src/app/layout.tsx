@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import { JSX } from "react";
 import "./globals.css";
 
+import { Montserrat } from "next/font/google";
+import { Header } from "./components/Header/Header";
+import TimeProvider from "./services/TimeContext";
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+});
+
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
