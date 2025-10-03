@@ -1,11 +1,21 @@
-"use client";
-import { createContext, useEffect, useState } from "react";
+'use client';
+import { createContext, useEffect, useState } from 'react';
 
-export const TimeContext = createContext<{ time: string; timeStatus: "short" | "normal" | "over"; isTimeVisible: boolean } | null>(null);
+export const TimeContext = createContext<{
+  time: string;
+  timeStatus: 'short' | 'normal' | 'over';
+  isTimeVisible: boolean;
+} | null>(null);
 
-export default function TimeProvider({ children }: { children: React.ReactNode }) {
-  const [time, setTime] = useState<string>("02:00");
-  const [timeStatus, setTimeStatus] = useState<"short" | "normal" | "over">("normal");
+export default function TimeProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [time, setTime] = useState<string>('02:00');
+  const [timeStatus, setTimeStatus] = useState<'short' | 'normal' | 'over'>(
+    'normal'
+  );
   const [isTimeVisible, setIsTimeVisible] = useState(true);
 
   const blinkLight = () => {
@@ -18,19 +28,19 @@ export default function TimeProvider({ children }: { children: React.ReactNode }
     }, 100);
   };
   useEffect(() => {
-    let seconds = 120;
+    let seconds = 3;
     setTime(formatTime(seconds));
     const interval = setInterval(() => {
       seconds -= 1;
       setTime(formatTime(seconds));
-      if (seconds === 31 && timeStatus !== "short") {
+      if (seconds === 31 && timeStatus !== 'short') {
         blinkLight();
       }
-      if (seconds === 30 && timeStatus !== "short") {
-        setTimeStatus("short");
+      if (seconds === 30 && timeStatus !== 'short') {
+        setTimeStatus('short');
       }
       if (seconds <= 0) {
-        setTimeStatus("over");
+        setTimeStatus('over');
         clearInterval(interval);
       }
     }, 1000);
@@ -40,10 +50,14 @@ export default function TimeProvider({ children }: { children: React.ReactNode }
   function formatTime(sec: number) {
     const m = Math.floor(sec / 60)
       .toString()
-      .padStart(2, "0");
-    const s = (sec % 60).toString().padStart(2, "0");
+      .padStart(2, '0');
+    const s = (sec % 60).toString().padStart(2, '0');
     return `${m}:${s}`;
   }
 
-  return <TimeContext.Provider value={{ time, timeStatus, isTimeVisible }}>{children}</TimeContext.Provider>;
+  return (
+    <TimeContext.Provider value={{ time, timeStatus, isTimeVisible }}>
+      {children}
+    </TimeContext.Provider>
+  );
 }

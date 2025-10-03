@@ -1,5 +1,5 @@
 .hit::after {
-  content: "хит!";
+  content: 'хит!';
   position: absolute;
   font-size: 22px;
   color: #fdb056;
@@ -19,4 +19,27 @@
   color: white;
   background-color: #fd5656;
   right: 20px;
+}
+
+.priceBeforeSale {
+  position: absolute;
+  top: 150px;
+  font-size: 22px;
+  color: #919191;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.withOutSale .priceBeforeSale {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-size: 48px;
+  color: white;
+  font-weight: 600;
+}
+
+.withOutSale .priceAfterSale {
+  opacity: 0;
 }
