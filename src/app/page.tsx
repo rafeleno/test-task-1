@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { HomePageView } from './(pages)/HomePage/HomePageView';
+import { HomePageView } from './(pages)/HomePageView';
 
 const Page = async (): Promise<JSX.Element> => {
   const employees = await fetch('https://t-core.fit-hub.pro/Test/GetTariffs');
