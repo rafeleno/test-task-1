@@ -1,5 +1,5 @@
 .hit::after {
-  content: 'хит!';
+  content: "хит!";
   position: absolute;
   font-size: 22px;
   color: #fdb056;
@@ -12,18 +12,24 @@
   border-radius: 0 0 8px 8px;
   width: min-content;
   text-wrap: nowrap;
-  padding: 2px 8px 2px;
+  height: 50px;
+  padding: 15px 8px 2px;
   left: 48px;
-  top: 0;
+  top: -13px;
   font-size: 22px;
   color: white;
   background-color: #fd5656;
   right: 20px;
 }
 
+.withOutSale .salePercentTab {
+  animation: SaleTabAnimation 0.55s forwards;
+}
+
 .priceBeforeSale {
   position: absolute;
-  top: 150px;
+  right: 0;
+  top: 60px;
   font-size: 22px;
   color: #919191;
   font-weight: 400;
@@ -31,15 +37,74 @@
 }
 
 .withOutSale .priceBeforeSale {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-decoration: none;
+  animation: priceBeforeSaleAnimation 0.5s forwards;
+}
+
+.priceAfterSale {
   font-size: 48px;
+  left: 0;
   color: white;
   font-weight: 600;
+  transition: all 0.25s ease-in-out;
 }
 
 .withOutSale .priceAfterSale {
-  opacity: 0;
+  animation: priceAfterSaleAnimation 0.5s forwards;
+}
+
+@keyframes SaleTabAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes priceAfterSaleAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes priceBeforeSaleAnimation {
+  0% {
+    right: 0;
+    translate: 0 0;
+    top: 60px;
+    font-size: 22px;
+    color: #919191;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  50% {
+    right: 0;
+    translate: 0 0;
+    top: 60px;
+    font-size: 22px;
+    color: #919191;
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+  100% {
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
+    text-decoration: none;
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+  }
 }

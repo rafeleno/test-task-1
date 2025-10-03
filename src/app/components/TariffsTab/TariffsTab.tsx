@@ -22,13 +22,14 @@ export const TariffsTab = ({
       priceAfterSale={priceAfterSale}
       id={id}
       priceBeforeSale={priceBeforeSale}
-      salePercent={isOnSale ? salePercentValue : null}
+      salePercent={salePercentValue}
       description={description}
       isHit={isHit}
       className={className}
       isVertical={isVertical}
       isActive={isActive}
       onClick={onClick}
+      isOnSale={isOnSale}
     />
   );
 };
