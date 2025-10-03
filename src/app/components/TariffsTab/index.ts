@@ -1,0 +1,1 @@
+export { TariffsTab } from "./TariffsTab";
