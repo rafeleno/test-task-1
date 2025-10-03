@@ -1,11 +1,9 @@
+export type TTimeStatus = "normal" | "short" | "over" | undefined;
+
 export interface HeaderViewProps {
   time: string | undefined;
-  timeStatus: "short" | "normal" | "over" | undefined;
+  timeStatus: TTimeStatus;
   isTimeVisible: boolean | undefined;
 }
 
-export interface HeaderProps {
-  time: string;
-  timeStatus: "normal" | "short" | "over";
-  isTimeVisible: boolean;
-}
+export type HeaderProps = HeaderViewProps;
