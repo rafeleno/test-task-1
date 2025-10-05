@@ -10,7 +10,7 @@ export const Tariffs = ({ tariffs, isOnSale, selectedOffer, setSelectedOffer }: 
   // Важно! С Бэка приходит массив, в котором у первых двух элементов одиновый id, так что id в map генерируется локально
 
   return (
-    <div className="content-supplies grid grid-cols-3  grid-rows-[190px_335px] gap-[14] mb-5">
+    <div className="content-supplies grid grid-cols-1 auto-rows-[130] xl:auto-rows-[190] gap-[14] mb-5 xl:grid-cols-3 xl:grid-rows-[190px_335px]">
       {tariffs &&
         tariffs.map((offer: ITariff, index: number) => {
           return (

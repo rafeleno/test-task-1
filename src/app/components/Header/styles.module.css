@@ -1,22 +1,22 @@
 .time {
   position: relative;
   font-size: 40px;
-  color: #ffbb00;
+  color: #fff;
 }
 
 .shortTime {
-  color: #ff4e4e;
+  color: #ffbb00;
 }
 
 .timeIsOver {
-  color: #fff;
+  color: #ff4e4e;
 }
 
 .time::before,
 .time::after {
   content: "";
   position: absolute;
-  background-image: url("/starIconGold.svg");
+  background-image: url("/starIconWhite.svg");
   transform: translateY(-50%);
   top: 50%;
   width: 14px;
@@ -25,12 +25,12 @@
 
 .shortTime.time::before,
 .shortTime.time::after {
-  background-image: url("/starIconRed.svg");
+  background-image: url("/starIconGold.svg");
 }
 
 .timeIsOver.time::before,
 .timeIsOver.time::after {
-  background-image: url("/starIconWhite.svg");
+  background-image: url("/starIconRed.svg");
 }
 
 .time::before {

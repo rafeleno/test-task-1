@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  .manImage {
+    height: 600px;
+  }
+}
+
+@media (max-width: 468px) {
+  .manImage {
+    height: 400px;
+  }
+}
+
+@media (max-width: 375px) {
+  .manImage {
+    height: 250px;
+  }
+}
