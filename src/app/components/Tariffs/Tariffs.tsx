@@ -12,21 +12,23 @@ export const Tariffs = ({ tariffs, isOnSale, selectedOffer, setSelectedOffer }: 
   return (
     <div className="content-supplies grid grid-cols-3  grid-rows-[190px_335px] gap-[14] mb-5">
       {tariffs &&
-        tariffs.map((offer: ITariff, index: number) => (
-          <TariffsTab
-            onClick={() => setSelectedOffer(index.toString())}
-            id={index.toString()}
-            isVertical={offer.is_best}
-            period={offer.period}
-            priceAfterSale={offer.price}
-            priceBeforeSale={offer.full_price}
-            description={offer.text}
-            isHit={offer.is_best}
-            isActive={selectedOffer === index.toString()}
-            isOnSale={isOnSale}
-            // ctx?.timeStatus !== "over"
-          />
-        ))}
+        tariffs.map((offer: ITariff, index: number) => {
+          return (
+            <TariffsTab
+              onClick={() => setSelectedOffer(index.toString())}
+              id={index.toString()}
+              isVertical={offer.is_best}
+              period={offer.period}
+              priceAfterSale={offer.price}
+              priceBeforeSale={offer.full_price}
+              description={offer.text}
+              isHit={offer.is_best}
+              isActive={selectedOffer === index.toString()}
+              isOnSale={isOnSale}
+              className="overflow-hidden"
+            />
+          );
+        })}
     </div>
   );
 };

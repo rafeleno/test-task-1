@@ -1,3 +1,5 @@
+type ZIndexProps = { lessIndex: string; biggerIndex: string };
+
 export interface TariffsTabViewProps {
   period: string;
   priceAfterSale: number;

@@ -1,5 +1,4 @@
-.hit::after {
-  content: "хит!";
+.hit {
   position: absolute;
   font-size: 22px;
   color: #fdb056;
@@ -23,7 +22,7 @@
 }
 
 .withOutSale .salePercentTab {
-  animation: SaleTabAnimation 0.55s forwards;
+  animation: SaleTabAnimation 0.7s forwards;
 }
 
 .priceBeforeSale {
@@ -37,7 +36,7 @@
 }
 
 .withOutSale .priceBeforeSale {
-  animation: priceBeforeSaleAnimation 0.5s forwards;
+  animation: priceBeforeSaleAnimation 0.65s forwards;
 }
 
 .priceAfterSale {
@@ -49,7 +48,7 @@
 }
 
 .withOutSale .priceAfterSale {
-  animation: priceAfterSaleAnimation 0.5s forwards;
+  animation: priceAfterSaleAnimation 0.65s forwards;
 }
 
 @keyframes SaleTabAnimation {

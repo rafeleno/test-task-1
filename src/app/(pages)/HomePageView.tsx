@@ -1,7 +1,4 @@
-"use client";
-
-import { JSX, useContext, useState } from "react";
-import styles from "./sryles.module.css";
+import { JSX } from "react";
 
 import AttentionMessage from "@/app/components/FlexBox/FlexBox";
 import CheckBox from "@/app/components/CheckBox/CheckBox";
@@ -21,7 +18,7 @@ export const HomePageView = (): JSX.Element => {
         Выбери подходящий для себя <span className="text-[#fdb056]">тариф</span>
       </h1>
       <div className="content m-auto h-auto flex flex-row mb-[63]">
-        <img src="/man.png" alt="bulk man" className="content__image mr-auto mt-[52] h-[763]" />
+        <img src="/man.png" alt="bulk man" className="content__image mr-auto mt-[52] h-[763] before:bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal]" />
         <div className="w-full max-w-[740px]">
           {/* TODO: 
           Разобрать коммиты(reset soft)
@@ -30,29 +27,6 @@ export const HomePageView = (): JSX.Element => {
           сделать мобильную версию,
           добавить анимации */}
           <CheckoutArea />
-          {/* <Tariffs />
-          <FlexBox
-            elements={[
-              <span className="mr-2">
-                <img src="/alert.svg" className="w-[40] h-[40]" />
-              </span>,
-              <span>
-                Следуя плану на 3 месяца и более, люди получают
-                <br />в 2 раза лучший результат, чем за 1 месяц
-              </span>,
-            ]}
-            className="mb-[30]"
-          ></FlexBox>
-          <CheckBox isChecked={isPolicyChecked} onChange={setIsPolicyChecked}>
-            Я согласен с офертой рекуррентных платежей и Политикой конфиденциальности
-          </CheckBox>
-          <Button onClick={() => console.log("Button clicked")} className="mb-[14]">
-            Купить
-          </Button>
-          <p className="text-sm/4 text-[#9b9b9b]">
-            Нажимая кнопку «Купить», Пользователь соглашается на разовое списание денежных средств для получения пожизненного доступа к приложению. Пользователь
-            соглашается, что данные кредитной/дебетовой карты будут сохранены для осуществления покупок дополнительных услуг сервиса в случае желания пользователя.
-          </p> */}
         </div>
       </div>
       <FlexBox

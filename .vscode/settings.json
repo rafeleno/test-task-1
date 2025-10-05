@@ -1,0 +1,12 @@
+{
+  // Включаем автоисправление ESLint при сохранении
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "true"
+  },
+
+  // На всякий случай укажи форматтер
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Можно отключить общий формат при сохранении, чтобы не дублировать Prettier
+  "editor.formatOnSave": "false"
+}

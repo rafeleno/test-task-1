@@ -1,3 +1,5 @@
+"use client";
+
 import { useContext, useEffect, useState } from "react";
 import Button from "../Button/Button";
 import CheckBox from "../CheckBox/CheckBox";

@@ -5,7 +5,7 @@ const Button = ({ children, size = "medium", className, onClick, disabled }: But
   return (
     <button
       className={
-        "bg-[#fdb056] py-5 flex flex-col align-items-center rounded-[20] font-bold text-xl text-[#191e1f] leading-[130%] transition-opacity duration-150" +
+        "bg-[#fdb056] py-5 flex flex-col align-items-center rounded-[20] font-bold text-xl text-[#191e1f] leading-[130%] transition-opacity duration-100" +
         " " +
         (size === "small" ? "w-50" : size === "medium" ? "w-[352]" : "w-full") +
         " " +
