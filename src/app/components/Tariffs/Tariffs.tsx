@@ -1,16 +1,17 @@
-"use client";
-
 import { ITariff, TariffsProps } from "./types";
 import { TariffsTab } from "../TariffsTab";
-import { useContext, useEffect, useState } from "react";
-import { getTariffs } from "@/app/services/api";
-import { TimeContext } from "@/app/services/TimeContext";
+import { Loader } from "../Loader";
 
-export const Tariffs = ({ tariffs, isOnSale, selectedOffer, setSelectedOffer }: TariffsProps) => {
+export const Tariffs = ({ tariffs, isOnSale, selectedOffer, setSelectedOffer, className }: TariffsProps) => {
   // Важно! С Бэка приходит массив, в котором у первых двух элементов одиновый id, так что id в map генерируется локально
 
   return (
-    <div className="content-supplies grid grid-cols-1 auto-rows-[130] xl:auto-rows-[190] gap-[14] mb-5 xl:grid-cols-3 xl:grid-rows-[190px_335px]">
+    <div
+      className={`relative content-supplies grid grid-cols-1 grid-rows-[repeat(4,_130px)] gap-[14] xl:grid-cols-3 xl:grid-rows-[190px_335px] ${
+        className ? ` ${className}` : ""
+      }`}
+    >
+      {!tariffs && <Loader />}
       {tariffs &&
         tariffs.map((offer: ITariff, index: number) => {
           return (
@@ -32,5 +33,3 @@ export const Tariffs = ({ tariffs, isOnSale, selectedOffer, setSelectedOffer }: 
     </div>
   );
 };
-
-export default Tariffs;

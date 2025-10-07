@@ -1,0 +1,1 @@
+export { CheckoutArea } from "./CheckoutArea";

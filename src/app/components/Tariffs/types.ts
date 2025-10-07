@@ -14,4 +14,5 @@ export interface TariffsProps {
   selectedOffer: string | null;
   tariffs: ITariff[] | null;
   isOnSale: boolean;
+  className?: string;
 }

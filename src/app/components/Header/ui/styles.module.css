@@ -4,6 +4,12 @@
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .time {
+    font-size: 30px;
+  }
+}
+
 .shortTime {
   color: #ffbb00;
 }

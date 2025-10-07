@@ -1,5 +1,5 @@
-import { TariffsTabView } from "./TariffsTabView";
 import { TariffsTabViewProps } from "./types";
+import { TariffsTabView } from "./ui/TariffsTabView";
 
 export const TariffsTab = ({
   period,

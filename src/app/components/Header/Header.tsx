@@ -1,9 +1,7 @@
 "use client";
 
-import { JSX, useContext, useEffect, useState } from "react";
-import { HeaderView } from "./HeaderView";
-import { HeaderProps } from "./types";
-import { createContext } from "react";
+import { JSX, useContext } from "react";
+import { HeaderView } from "./ui/HeaderView";
 import { TimeContext } from "@/app/services/TimeContext";
 
 export const Header = (): JSX.Element => {

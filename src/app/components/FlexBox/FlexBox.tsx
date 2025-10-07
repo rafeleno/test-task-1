@@ -1,8 +1,7 @@
-import AlertIcon from "@public/alert.svg";
 import { FlexBoxProps } from "./types";
 import styles from "./styles.module.css";
 
-const FlexBox = ({ elements, className, direction = "horizontal", size = "medium", isTransparent = false }: FlexBoxProps) => {
+export const FlexBox = ({ elements, className, direction = "horizontal", size = "medium", isTransparent = false }: FlexBoxProps) => {
   return (
     <div
       className={`
@@ -17,5 +16,3 @@ const FlexBox = ({ elements, className, direction = "horizontal", size = "medium
     </div>
   );
 };
-
-export default FlexBox;
